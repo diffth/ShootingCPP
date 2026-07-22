@@ -1,0 +1,21 @@
+# Visual Studio auto generated files
+.vs/
+.idea/
+*.sln
+*.slnx
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.cppclean
+
+# UE Build & Output files
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
