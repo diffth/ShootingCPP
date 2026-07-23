@@ -14,7 +14,8 @@ ACodingTestActor::ACodingTestActor()
 void ACodingTestActor::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Warning, TEXT("Hello World"));
+	//UE_LOG(LogTemp, Warning, TEXT("Hello World"));
+	UE_LOG(LogTemp, Warning, TEXT("%d"), number1);
 	
 }
 
