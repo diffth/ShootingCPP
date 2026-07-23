@@ -34,7 +34,7 @@ public:
 	FString name = TEXT("박원석");
 	*/
 	
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 number1 = 10;
 	
 	UPROPERTY(EditDefaultsOnly)
