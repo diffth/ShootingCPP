@@ -25,5 +25,6 @@ public:
     
     int32 number1 = 10;
 	float number2 = 3.14f;
-	FString name = "Park Won Seok";
+	//FString name = "Park Won Seok";
+	FString name = TEXT("박원석");
 };
