@@ -23,6 +23,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
     
-    int32 number1=10;
-    int32 number2=20;
+    int32 number1 = 10;
+	float number2 = 3.14f;
 };
