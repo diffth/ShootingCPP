@@ -41,7 +41,7 @@ public:
 	float number2 = 3.14f;
 	
 	//FString name = "Park Won Seok";
-	UPROPERTY(EditInstanceOnly)
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly)
 	FString name = TEXT("박원석");
 	
 	bool isReady = true;
