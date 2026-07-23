@@ -43,4 +43,7 @@ public:
 	//FString name = "Park Won Seok";
 	UPROPERTY(EditInstanceOnly)
 	FString name = TEXT("박원석");
+	
+	bool isReady = true;
+	bool isFinished = false;
 };
