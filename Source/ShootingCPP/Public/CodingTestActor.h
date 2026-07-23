@@ -23,8 +23,24 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
     
+	/*
+	UPROPERTY(EditAnywhere)
     int32 number1 = 10;
+	
+	UPROPERTY(VisibleAnywhere)
 	float number2 = 3.14f;
+	
 	//FString name = "Park Won Seok";
+	FString name = TEXT("박원석");
+	*/
+	
+	UPROPERTY(EditAnywhere)
+	int32 number1 = 10;
+	
+	UPROPERTY(EditDefaultsOnly)
+	float number2 = 3.14f;
+	
+	//FString name = "Park Won Seok";
+	UPROPERTY(EditInstanceOnly)
 	FString name = TEXT("박원석");
 };
