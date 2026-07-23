@@ -16,7 +16,7 @@ void ACodingTestActor::BeginPlay()
 	Super::BeginPlay();
 	//UE_LOG(LogTemp, Warning, TEXT("Hello World"));
 	UE_LOG(LogTemp, Warning, TEXT("%d"), number1);
-	UE_LOG(LogTemp, Warning, TEXT("%d"), number2);
+	UE_LOG(LogTemp, Warning, TEXT("%.2f"), number2);
 }
 
 // Called every frame
