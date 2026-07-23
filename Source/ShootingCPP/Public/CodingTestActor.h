@@ -24,5 +24,5 @@ public:
 	virtual void Tick(float DeltaTime) override;
     
     int32 number1=10;
-    
+    int32 number2=20;
 };
