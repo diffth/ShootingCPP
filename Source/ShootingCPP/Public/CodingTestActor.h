@@ -35,10 +35,10 @@ public:
 	*/
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 number1 = 10;
+	int number1 = 10;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	float number2 = 3.14f;
+	int number2 = 30;
 	
 	//FString name = "Park Won Seok";
 	UPROPERTY(EditInstanceOnly, BlueprintReadOnly)
