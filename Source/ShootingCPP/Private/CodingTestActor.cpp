@@ -15,10 +15,14 @@ void ACodingTestActor::BeginPlay()
 {
 	Super::BeginPlay();
 	//UE_LOG(LogTemp, Warning, TEXT("Hello World"));
-	UE_LOG(LogTemp, Warning, TEXT("%d"), number1);
-	UE_LOG(LogTemp, Warning, TEXT("%.2f"), number2);
-	UE_LOG(LogTemp, Warning, TEXT("Name: %s"), *name);
-	UE_LOG(LogTemp, Warning, TEXT("isReady: %d, isFinished: %d"), isReady, isFinished);
+	//UE_LOG(LogTemp, Warning, TEXT("%d"), number1);
+	//UE_LOG(LogTemp, Warning, TEXT("%.2f"), number2);
+	//UE_LOG(LogTemp, Warning, TEXT("Name: %s"), *name);
+	//UE_LOG(LogTemp, Warning, TEXT("isReady: %d, isFinished: %d"), isReady, isFinished);
+	
+	int result = Add(number1, number2);
+	//UE_LOG(LogTemp, Warning, TEXT("%d"), result);
+	UE_LOG(LogTemp, Warning, TEXT("%d"), static_cast<int>(result));
 }
 
 // Called every frame
