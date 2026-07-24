@@ -46,4 +46,7 @@ public:
 	
 	bool isReady = true;
 	bool isFinished = false;
+	
+	//더하기 함수 선언
+	int Add(int num1, int num2);
 };
