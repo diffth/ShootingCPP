@@ -20,7 +20,7 @@ void ACodingTestActor::BeginPlay()
 	//UE_LOG(LogTemp, Warning, TEXT("Name: %s"), *name);
 	//UE_LOG(LogTemp, Warning, TEXT("isReady: %d, isFinished: %d"), isReady, isFinished);
 	
-	int result = Add(number1, number2);
+	int result = AddFunction(number1, number2);
 	//UE_LOG(LogTemp, Warning, TEXT("%d"), result);
 	UE_LOG(LogTemp, Warning, TEXT("%d"), static_cast<int>(result));
 }
@@ -31,7 +31,7 @@ void ACodingTestActor::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 }
 
-int ACodingTestActor::Add(int num1, int num2)
+int ACodingTestActor::AddFunction(int num1, int num2)
 {
 	int result = num1 + num2;
 	return result;
