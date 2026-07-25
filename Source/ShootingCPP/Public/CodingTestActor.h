@@ -48,6 +48,7 @@ public:
 	bool isFinished = false;
 	
 	//더하기 함수 선언
-	UFUNCTION(BlueprintCallable)
+	//UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintPure)
 	int AddFunction(int num1, int num2);
 };
