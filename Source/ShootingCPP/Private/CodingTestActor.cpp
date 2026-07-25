@@ -22,7 +22,12 @@ void ACodingTestActor::BeginPlay()
 	
 	int result = AddFunction(number1, number2);
 	//UE_LOG(LogTemp, Warning, TEXT("%d"), result);
-	UE_LOG(LogTemp, Warning, TEXT("%d"), static_cast<int>(result));
+	//UE_LOG(LogTemp, Warning, TEXT("%d"), static_cast<int>(result));
+	
+	if (number1 > 10)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("numer1의 값이 10보다 큽니다."));
+	}
 }
 
 // Called every frame
