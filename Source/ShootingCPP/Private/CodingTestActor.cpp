@@ -34,3 +34,13 @@ int ACodingTestActor::AddFunction(int num1, int num2)
 	int result = num1 + num2;
 	return result;
 }
+
+int ACodingTestActor::SubtractFunction(int num1, int num2)
+{
+	return num1 - num2;
+}
+
+int ACodingTestActor::MultiplyFunction(int num1, int num2)
+{
+	return num1 * num2;
+}

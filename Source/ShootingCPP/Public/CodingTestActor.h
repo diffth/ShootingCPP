@@ -51,4 +51,11 @@ public:
 	//UFUNCTION(BlueprintCallable)
 	UFUNCTION(BlueprintPure)
 	int AddFunction(int num1, int num2);
+
+	//빼기 및 곱하기 함수 선언
+	UFUNCTION(BlueprintPure)
+	int SubtractFunction(int num1, int num2);
+
+	UFUNCTION(BlueprintPure)
+	int MultiplyFunction(int num1, int num2);
 };
