@@ -28,6 +28,9 @@ void ACodingTestActor::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("number1의 값이 10보다 큽니다."));
 	}
+
+	TArray<int32> testArray = { 10, 20, 30, 40, 50 };
+	PrintArrayElements(testArray);
 }
 
 // Called every frame
@@ -60,4 +63,12 @@ float ACodingTestActor::DivideFunction(float num1, float num2)
 		return 0.0f;
 	}
 	return num1 / num2;
+}
+
+void ACodingTestActor::PrintArrayElements(const TArray<int32>& numbers)
+{
+	for (int32 i = 0; i < numbers.Num(); ++i)
+	{
+		UE_LOG(LogTemp, Log, TEXT("Array[%d]: %d"), i, numbers[i]);
+	}
 }
