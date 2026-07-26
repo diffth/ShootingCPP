@@ -15,14 +15,14 @@ void ACodingTestActor::BeginPlay()
 	Super::BeginPlay();
 	
 	int32 addResult = AddFunction(number1, number2);
-	// int32 subResult = SubtractFunction(number1, number2);
-	// int32 mulResult = MultiplyFunction(number1, number2);
-	// float divResult = DivideFunction(static_cast<float>(number1), static_cast<float>(number2));
+	int32 subResult = SubtractFunction(number1, number2);
+	int32 mulResult = MultiplyFunction(number1, number2);
+	float divResult = DivideFunction(static_cast<float>(number1), static_cast<float>(number2));
 
-	// UE_LOG(LogTemp, Warning, TEXT("AddFunction Result: %d"), addResult);
-	// UE_LOG(LogTemp, Warning, TEXT("SubtractFunction Result: %d"), subResult);
-	// UE_LOG(LogTemp, Warning, TEXT("MultiplyFunction Result: %d"), mulResult);
-	// UE_LOG(LogTemp, Warning, TEXT("DivideFunction Result: %.2f"), divResult);
+	UE_LOG(LogTemp, Warning, TEXT("AddFunction Result: %d"), addResult);
+	UE_LOG(LogTemp, Warning, TEXT("SubtractFunction Result: %d"), subResult);
+	UE_LOG(LogTemp, Warning, TEXT("MultiplyFunction Result: %d"), mulResult);
+	UE_LOG(LogTemp, Warning, TEXT("DivideFunction Result: %.2f"), divResult);
 	
 	if (number1 > 10)
 	{
