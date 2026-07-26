@@ -16,9 +16,13 @@ void ACodingTestActor::BeginPlay()
 	
 	int32 addResult = AddFunction(number1, number2);
 
-	if (number1 > 10)
+	if (number1 >= 100)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("number1의 값이 10보다 큽니다."));
+		UE_LOG(LogTemp, Warning, TEXT("number1의 값이 100보다 큽니다."));
+	}
+	else if (number1 >= 10)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("number1의 값이 10 이상 100 미만입니다."));
 	}
 	else
 	{
