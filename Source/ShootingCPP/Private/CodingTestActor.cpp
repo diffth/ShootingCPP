@@ -5,28 +5,21 @@
 // Sets default values
 ACodingTestActor::ACodingTestActor()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
 }
 
 // Called when the game starts or when spawned
 void ACodingTestActor::BeginPlay()
 {
 	Super::BeginPlay();
-	//UE_LOG(LogTemp, Warning, TEXT("Hello World"));
-	//UE_LOG(LogTemp, Warning, TEXT("%d"), number1);
-	//UE_LOG(LogTemp, Warning, TEXT("%.2f"), number2);
-	//UE_LOG(LogTemp, Warning, TEXT("Name: %s"), *name);
-	//UE_LOG(LogTemp, Warning, TEXT("isReady: %d, isFinished: %d"), isReady, isFinished);
 	
-	int result = AddFunction(number1, number2);
-	//UE_LOG(LogTemp, Warning, TEXT("%d"), result);
-	//UE_LOG(LogTemp, Warning, TEXT("%d"), static_cast<int>(result));
+	int32 result = AddFunction(number1, number2);
+	UE_LOG(LogTemp, Warning, TEXT("AddFunction Result: %d"), result);
 	
 	if (number1 > 10)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("numer1의 값이 10보다 큽니다."));
+		UE_LOG(LogTemp, Warning, TEXT("number1의 값이 10보다 큽니다."));
 	}
 }
 
@@ -41,4 +34,3 @@ int ACodingTestActor::AddFunction(int num1, int num2)
 	int result = num1 + num2;
 	return result;
 }
-
