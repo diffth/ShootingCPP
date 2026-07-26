@@ -58,4 +58,7 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	int MultiplyFunction(int num1, int num2);
+
+	UFUNCTION(BlueprintPure)
+	float DivideFunction(float num1, float num2);
 };
