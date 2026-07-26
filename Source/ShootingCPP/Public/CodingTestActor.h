@@ -52,13 +52,13 @@ public:
 	UFUNCTION(BlueprintPure)			
 	int32 AddFunction(int32 num1, int32 num2);
 
-	//빼기 및 곱하기 함수 선언
-	// UFUNCTION(BlueprintPure)
-	// int32 SubtractFunction(int num1, int num2);
+	//빼기 및 곱하기, 나눗셈 함수 선언
+	UFUNCTION(BlueprintPure)
+	int32 SubtractFunction(int32 num1, int32 num2);
 
-	// UFUNCTION(BlueprintPure)
-	// int32 MultiplyFunction(int num1, int num2);
+	UFUNCTION(BlueprintPure)
+	int32 MultiplyFunction(int32 num1, int32 num2);
 
-	// UFUNCTION(BlueprintPure)
-	// float DivideFunction(float num1, float num2);
+	UFUNCTION(BlueprintPure)
+	float DivideFunction(float num1, float num2);
 };

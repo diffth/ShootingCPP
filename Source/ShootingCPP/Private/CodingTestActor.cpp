@@ -41,3 +41,23 @@ int32 ACodingTestActor::AddFunction(int32 num1, int32 num2)
 	int32 result = num1 + num2;
 	return result;
 }
+
+int32 ACodingTestActor::SubtractFunction(int32 num1, int32 num2)
+{
+	return num1 - num2;
+}
+
+int32 ACodingTestActor::MultiplyFunction(int32 num1, int32 num2)
+{
+	return num1 * num2;
+}
+
+float ACodingTestActor::DivideFunction(float num1, float num2)
+{
+	if (num2 == 0.0f)
+	{
+		UE_LOG(LogTemp, Error, TEXT("Divide by zero!"));
+		return 0.0f;
+	}
+	return num1 / num2;
+}
