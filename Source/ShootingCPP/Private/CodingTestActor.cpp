@@ -20,6 +20,10 @@ void ACodingTestActor::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("number1의 값이 10보다 큽니다."));
 	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("number1의 값이 10 이하입니다."));
+	}
 
 }
 
