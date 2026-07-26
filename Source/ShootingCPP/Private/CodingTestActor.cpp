@@ -14,8 +14,13 @@ void ACodingTestActor::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	int32 result = AddFunction(number1, number2);
-	UE_LOG(LogTemp, Warning, TEXT("AddFunction Result: %d"), result);
+	int32 addResult = AddFunction(number1, number2);
+	int32 subResult = SubtractFunction(number1, number2);
+	int32 mulResult = MultiplyFunction(number1, number2);
+
+	UE_LOG(LogTemp, Warning, TEXT("AddFunction Result: %d"), addResult);
+	UE_LOG(LogTemp, Warning, TEXT("SubtractFunction Result: %d"), subResult);
+	UE_LOG(LogTemp, Warning, TEXT("MultiplyFunction Result: %d"), mulResult);
 	
 	if (number1 > 10)
 	{
