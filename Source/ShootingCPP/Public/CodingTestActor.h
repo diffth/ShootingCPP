@@ -52,17 +52,4 @@ public:
 	UFUNCTION(BlueprintPure)			
 	int32 AddFunction(int32 num1, int32 num2);
 
-	//빼기 및 곱하기, 나눗셈 함수 선언
-	UFUNCTION(BlueprintPure)
-	int32 SubtractFunction(int32 num1, int32 num2);
-
-	UFUNCTION(BlueprintPure)
-	int32 MultiplyFunction(int32 num1, int32 num2);
-
-	UFUNCTION(BlueprintPure)
-	float DivideFunction(float num1, float num2);
-
-	// 배열 처리 예제 함수 선언
-	UFUNCTION(BlueprintCallable)
-	void PrintArrayElements(const TArray<int32>& numbers);
 };
