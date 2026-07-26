@@ -15,14 +15,14 @@ void ACodingTestActor::BeginPlay()
 	Super::BeginPlay();
 	
 	int32 addResult = AddFunction(number1, number2);
-	int32 subResult = SubtractFunction(number1, number2);
-	int32 mulResult = MultiplyFunction(number1, number2);
-	float divResult = DivideFunction(static_cast<float>(number1), static_cast<float>(number2));
+	// int32 subResult = SubtractFunction(number1, number2);
+	// int32 mulResult = MultiplyFunction(number1, number2);
+	// float divResult = DivideFunction(static_cast<float>(number1), static_cast<float>(number2));
 
-	UE_LOG(LogTemp, Warning, TEXT("AddFunction Result: %d"), addResult);
-	UE_LOG(LogTemp, Warning, TEXT("SubtractFunction Result: %d"), subResult);
-	UE_LOG(LogTemp, Warning, TEXT("MultiplyFunction Result: %d"), mulResult);
-	UE_LOG(LogTemp, Warning, TEXT("DivideFunction Result: %.2f"), divResult);
+	// UE_LOG(LogTemp, Warning, TEXT("AddFunction Result: %d"), addResult);
+	// UE_LOG(LogTemp, Warning, TEXT("SubtractFunction Result: %d"), subResult);
+	// UE_LOG(LogTemp, Warning, TEXT("MultiplyFunction Result: %d"), mulResult);
+	// UE_LOG(LogTemp, Warning, TEXT("DivideFunction Result: %.2f"), divResult);
 	
 	if (number1 > 10)
 	{
@@ -36,28 +36,8 @@ void ACodingTestActor::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 }
 
-int ACodingTestActor::AddFunction(int num1, int num2)
+int32 ACodingTestActor::AddFunction(int32 num1, int32 num2)
 {
-	int result = num1 + num2;
+	int32 result = num1 + num2;
 	return result;
-}
-
-int ACodingTestActor::SubtractFunction(int num1, int num2)
-{
-	return num1 - num2;
-}
-
-int ACodingTestActor::MultiplyFunction(int num1, int num2)
-{
-	return num1 * num2;
-}
-
-float ACodingTestActor::DivideFunction(float num1, float num2)
-{
-	if (num2 == 0.0f)
-	{
-		UE_LOG(LogTemp, Error, TEXT("Divide by zero!"));
-		return 0.0f;
-	}
-	return num1 / num2;
 }

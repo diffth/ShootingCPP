@@ -35,10 +35,10 @@ public:
 	*/
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int number1 = 10;
+	int32 number1 = 10;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	int number2 = 30;
+	int32 number2 = 30;
 	
 	//FString name = "Park Won Seok";
 	UPROPERTY(EditInstanceOnly, BlueprintReadOnly)
@@ -49,16 +49,16 @@ public:
 	
 	//더하기 함수 선언
 	//UFUNCTION(BlueprintCallable)
-	UFUNCTION(BlueprintPure)
-	int AddFunction(int num1, int num2);
+	UFUNCTION(BlueprintPure)			
+	int32 AddFunction(int32 num1, int32 num2);
 
 	//빼기 및 곱하기 함수 선언
-	UFUNCTION(BlueprintPure)
-	int SubtractFunction(int num1, int num2);
+	// UFUNCTION(BlueprintPure)
+	// int32 SubtractFunction(int num1, int num2);
 
-	UFUNCTION(BlueprintPure)
-	int MultiplyFunction(int num1, int num2);
+	// UFUNCTION(BlueprintPure)
+	// int32 MultiplyFunction(int num1, int num2);
 
-	UFUNCTION(BlueprintPure)
-	float DivideFunction(float num1, float num2);
+	// UFUNCTION(BlueprintPure)
+	// float DivideFunction(float num1, float num2);
 };
