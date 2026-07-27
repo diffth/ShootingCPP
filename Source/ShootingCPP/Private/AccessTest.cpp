@@ -17,12 +17,21 @@ AAccessTest::AAccessTest()
 void AAccessTest::BeginPlay()
 {
 	Super::BeginPlay();
+	// ACodingTestActor* testActor = NewObject<ACodingTestActor>(this);
 	ACodingTestActor* testActor = GetWorld()->SpawnActor<ACodingTestActor>();
 	testActor->number1 = -100;
 	
 	number = 200;
 	numPointer = &number;
 	*numPointer = -30;
+	
+	UE_LOG(LogTemp, Warning, TEXT("변수의 값: %d"), number);
+	UE_LOG(LogTemp, Warning, TEXT("포인터의 값: %d"), *numPointer);
+	
+	if (testPointer)
+	{
+		testPointer->number2 = -10;
+	}
 }
 
 // Called every frame
