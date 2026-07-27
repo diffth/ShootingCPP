@@ -18,10 +18,11 @@ void AAccessTest::BeginPlay()
 {
 	Super::BeginPlay();
 	ACodingTestActor* testActor = GetWorld()->SpawnActor<ACodingTestActor>();
-	if (testActor)
-	{
-		testActor->number1 = -100;
-	}
+	testActor->number1 = -100;
+	
+	number = 200;
+	numPointer = &number;
+	*numPointer = -30;
 }
 
 // Called every frame
