@@ -32,7 +32,9 @@ public:
 	UPROPERTY(EditInstanceOnly, BlueprintReadOnly)
 	FString name = TEXT("박원석");
 	
+	UPROPERTY(EditAnywhere)
 	bool isReady = true;
+	
 	bool isFinished = false;
 	
 	//더하기 함수 선언
