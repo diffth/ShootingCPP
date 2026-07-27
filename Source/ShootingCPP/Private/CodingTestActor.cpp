@@ -41,8 +41,11 @@ void ACodingTestActor::BeginPlay()
 	for (int32 i=0; i<100; i++)
 	{
 		int32 result = i % 2;
-		// number1++;
-		// UE_LOG(LogTemp, Warning, TEXT("%d"), number1);
+		
+		if (result == 0)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("%d는 짝수입니다."), i);
+		}
 	}
 }
 
