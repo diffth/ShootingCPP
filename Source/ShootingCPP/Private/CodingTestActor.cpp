@@ -14,7 +14,7 @@ void ACodingTestActor::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	int32 addResult = AddFunction(number1, number2);
+	// int32 addResult = AddFunction(number1, number2);
 
 	if (number1 >= 100)
 	{
@@ -28,7 +28,16 @@ void ACodingTestActor::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("number1의 값이 10 이하입니다."));
 	}
-
+	if (isReady)
+	{
+		// Add 함수를 실행한다.
+		int32 result = AddFunction(number1, number2);
+		UE_LOG(LogTemp, Warning, TEXT("%d"), result);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("아직 준비가 안됐습니다."));
+	}
 }
 
 // Called every frame
