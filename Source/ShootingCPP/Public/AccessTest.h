@@ -18,6 +18,9 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	
+	int32 number;
+	int32* numPointer;
 
 public:	
 	// Called every frame
