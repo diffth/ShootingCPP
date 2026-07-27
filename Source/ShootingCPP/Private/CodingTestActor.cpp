@@ -40,8 +40,9 @@ void ACodingTestActor::BeginPlay()
 	}
 	for (int32 i=0; i<100; i++)
 	{
-		number1++;
-		UE_LOG(LogTemp, Warning, TEXT("%d"), number1);
+		int32 result = i % 2;
+		// number1++;
+		// UE_LOG(LogTemp, Warning, TEXT("%d"), number1);
 	}
 }
 
