@@ -29,7 +29,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	int32 number2 = 30;
 	
-	//FString name = "Park Won Seok";
 	UPROPERTY(EditInstanceOnly, BlueprintReadOnly)
 	FString name = TEXT("박원석");
 	
