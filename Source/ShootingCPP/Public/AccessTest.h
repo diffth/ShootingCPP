@@ -21,6 +21,9 @@ protected:
 	
 	int32 number;
 	int32* numPointer;
+	
+	UPROPERTY(EditAnywhere)
+	class ACodingTestActor* testPointer;
 
 public:	
 	// Called every frame
