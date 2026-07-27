@@ -38,6 +38,11 @@ void ACodingTestActor::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("아직 준비가 안됐습니다."));
 	}
+	for (int32 i=0; i<100; i++)
+	{
+		number1++;
+		UE_LOG(LogTemp, Warning, TEXT("%d"), number1);
+	}
 }
 
 // Called every frame
