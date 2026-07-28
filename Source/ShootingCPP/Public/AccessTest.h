@@ -29,5 +29,5 @@ public:
 	int32 number;
 	int32* numPointer;
 	
-	void AddPrint(int32 num1, int32 num2, int32 result);
+	void AddPrint(int32 num1, int32 num2, int32* result);
 };
