@@ -38,14 +38,14 @@ void AAccessTest::BeginPlay()
 	int32 value2 = 10;
 	int32 sum = 0;
 
-	AddPrint(value1, value2, sum);
+	AddPrint(value1, value2, &sum);
 	
 	UE_LOG(LogTemp, Warning, TEXT("%d"), sum);
 }
 
-void AAccessTest::AddPrint(int32 num1, int32 num2, int32 result)
+void AAccessTest::AddPrint(int32 num1, int32 num2, int32* result)
 {
-	result = num1 + num2;
+	*result = num1 + num2;
 }
 
 // Called every frame
