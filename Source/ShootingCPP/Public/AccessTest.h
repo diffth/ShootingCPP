@@ -19,11 +19,14 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	
+	UPROPERTY(EditAnywhere)
+	class ACodingTestActor* testPointer;
+	
 	int32 number;
 	int32* numPointer;
 	
-	UPROPERTY(EditAnywhere)
-	class ACodingTestActor* testPointer;
+	void AddPrint(int32 num1, int32 num2, int32 result);
+	
 
 public:	
 	// Called every frame
