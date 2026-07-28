@@ -34,6 +34,11 @@ void AAccessTest::BeginPlay()
 	}
 }
 
+void AAccessTest::AddPrint(int32 num1, int32 num2, int32 result)
+{
+	result = num1 + num2;
+}
+
 // Called every frame
 void AAccessTest::Tick(float DeltaTime)
 {
