@@ -18,7 +18,11 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	
+
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
 	UPROPERTY(EditAnywhere)
 	class ACodingTestActor* testPointer;
 	
@@ -26,10 +30,4 @@ protected:
 	int32* numPointer;
 	
 	void AddPrint(int32 num1, int32 num2, int32 result);
-	
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 };
