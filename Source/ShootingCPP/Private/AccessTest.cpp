@@ -21,6 +21,7 @@ void AAccessTest::BeginPlay()
 	ACodingTestActor* testActor = GetWorld()->SpawnActor<ACodingTestActor>();
 	testActor->number1 = -100;
 	
+	/*
 	number = 200;
 	numPointer = &number;
 	*numPointer = -30;
@@ -31,7 +32,15 @@ void AAccessTest::BeginPlay()
 	if (testPointer)
 	{
 		testPointer->number2 = -10;
-	}
+	}*/
+	
+	int32 value1 = 5;
+	int32 value2 = 10;
+	int32 sum = 0;
+
+	AddPrint(value1, value2, sum);
+	
+	UE_LOG(LogTemp, Warning, TEXT("%d"), sum);
 }
 
 void AAccessTest::AddPrint(int32 num1, int32 num2, int32 result)
