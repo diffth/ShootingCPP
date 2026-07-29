@@ -34,6 +34,9 @@ public:
 	class UStaticMeshComponent* meshComp;
 	
 	UPROPERTY(EditAnywhere)
+	class UInputMappingContext* imc_playerInput;
+	
+	UPROPERTY(EditAnywhere)
 	class UInputAction* ia_horizontal;
 	
 	UPROPERTY(EditAnywhere)
