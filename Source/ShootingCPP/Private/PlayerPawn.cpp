@@ -47,6 +47,8 @@ void APlayerPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	FVector dir = FVector(0, h, v);
+	dir.Normalize();
 }
 
 // Called to bind functionality to input
