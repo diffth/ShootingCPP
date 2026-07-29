@@ -44,6 +44,6 @@ public:
 	
 private:
 	void OnInputHorizontal(const struct FInputActionValue& value);
-	void OnInputVerticla(const struct FInputActionValue& value);
+	void OnInputVertical(const struct FInputActionValue& value);
 	
 };
