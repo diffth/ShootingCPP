@@ -78,9 +78,11 @@ void APlayerPawn::OnInputHorizontal(const FInputActionValue& value)
 void APlayerPawn::OnInputVertical(const FInputActionValue& value)
 {
 	// TODO: 상하 이동 처리 로직 작성
-	float ver = value.Get<float>();
-	UE_LOG(LogTemp, Warning, TEXT("Vertical: %.2f"), ver);
+	// float ver = value.Get<float>();
+	// UE_LOG(LogTemp, Warning, TEXT("Vertical: %.2f"), ver);
+	v = value.Get<float>();
 }
+
 
 
 
