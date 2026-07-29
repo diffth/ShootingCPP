@@ -43,7 +43,9 @@ public:
 	class UInputAction* ia_vertical;
 	
 private:
+	// Enhanced Input 액션 이벤트 콜백 함수
 	void OnInputHorizontal(const struct FInputActionValue& value);
 	void OnInputVertical(const struct FInputActionValue& value);
+
 	
 };
