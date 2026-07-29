@@ -33,7 +33,12 @@ void APlayerPawn::BeginPlay()
 	
 	if (pc != nullptr)
 	{
+		UEnhancedInputLocalPlayerSubsystem* subsys = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(pc->GetLocalPlayer());
 		
+		if (subsys != nullptr)
+		{
+			subsys->AddMappingContext(imc_playerInput,0);
+		}
 	}
 }
 
@@ -48,6 +53,7 @@ void APlayerPawn::Tick(float DeltaTime)
 void APlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
+	
+	UEnhancedInputComponent* enhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent);
 }
 
