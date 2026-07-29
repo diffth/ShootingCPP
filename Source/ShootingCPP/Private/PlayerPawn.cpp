@@ -2,6 +2,8 @@
 #include "PlayerPawn.h"
 #include "Components/BoxComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "EnhancedInputComponent.h"
+#include "EnhancedInputSubsystems.h"
 
 
 // Sets default values
@@ -27,6 +29,12 @@ void APlayerPawn::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	APlayerController* pc = GetWorld()->GetFirstPlayerController();
+	
+	if (pc != nullptr)
+	{
+		
+	}
 }
 
 // Called every frame
