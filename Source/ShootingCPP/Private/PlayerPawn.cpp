@@ -65,15 +65,18 @@ void APlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	}
 }
 
+// 좌우 이동 입력 콜백
 void APlayerPawn::OnInputHorizontal(const FInputActionValue& value)
 {
-	// 좌우 입력 처리 함수 구현
+	// TODO: 좌우 이동 처리 로직 작성
 }
 
+// 상하 이동 입력 콜백
 void APlayerPawn::OnInputVertical(const FInputActionValue& value)
 {
-	// 상하 입력 처리 함수 구현
+	// TODO: 상하 이동 처리 로직 작성
 }
+
 
 
 
