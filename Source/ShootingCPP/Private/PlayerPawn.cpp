@@ -65,3 +65,10 @@ void APlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	}
 }
 
+void APlayerPawn::OnInputHorizontal(const FInputActionValue& value)
+{
+	// 좌우 입력 처리 함수 구현
+}
+
+
+
