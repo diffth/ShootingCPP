@@ -70,5 +70,11 @@ void APlayerPawn::OnInputHorizontal(const FInputActionValue& value)
 	// 좌우 입력 처리 함수 구현
 }
 
+void APlayerPawn::OnInputVertical(const FInputActionValue& value)
+{
+	// 상하 입력 처리 함수 구현
+}
+
+
 
 
