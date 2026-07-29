@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+#include "InputActionValue.h"
 #include "PlayerPawn.generated.h"
 
 UCLASS()
@@ -31,4 +32,15 @@ public:
 	
 	UPROPERTY(EditAnywhere)
 	class UStaticMeshComponent* meshComp;
+	
+	UPROPERTY(EditAnywhere)
+	class UInputAction* ia_horizontal;
+	
+	UPROPERTY(EditAnywhere)
+	class UInputAction* ia_vertical;
+	
+private:
+	void OnInputHorizontal(const struct FInputActionValue& value);
+	void OnInputVerticla(const struct FInputActionValue& value);
+	
 };
