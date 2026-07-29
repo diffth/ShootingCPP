@@ -34,6 +34,9 @@ public:
 	class UStaticMeshComponent* meshComp;
 	
 	UPROPERTY(EditAnywhere)
+	float moveSpeed = 500;
+	
+	UPROPERTY(EditAnywhere)
 	class UInputMappingContext* imc_playerInput;
 	
 	UPROPERTY(EditAnywhere)
