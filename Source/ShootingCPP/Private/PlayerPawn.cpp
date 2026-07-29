@@ -69,8 +69,9 @@ void APlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 void APlayerPawn::OnInputHorizontal(const FInputActionValue& value)
 {
 	// TODO: 좌우 이동 처리 로직 작성
-	float hor = value.Get<float>();
-	UE_LOG(LogTemp, Warning, TEXT("Horizontal: %.2f"), hor);
+	// float hor = value.Get<float>();
+	// UE_LOG(LogTemp, Warning, TEXT("Horizontal: %.2f"), hor);
+	h = value.Get<float>();
 }
 
 // 상하 이동 입력 콜백
@@ -80,6 +81,7 @@ void APlayerPawn::OnInputVertical(const FInputActionValue& value)
 	float ver = value.Get<float>();
 	UE_LOG(LogTemp, Warning, TEXT("Vertical: %.2f"), ver);
 }
+
 
 
 
