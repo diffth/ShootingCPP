@@ -13,6 +13,7 @@ ABullet::ABullet()
 	boxComp = CreateDefaultSubobject<UBoxComponent>(TEXT("Box Collider"));
 	SetRootComponent(boxComp);
 	boxComp->SetBoxExtent(FVector(50.0f, 50.0f, 50.0f));
+	boxComp->SetWorldScale3D(initScale);
 	
 	meshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Static Mesh Component"));
 	meshComp->SetupAttachment(boxComp);
