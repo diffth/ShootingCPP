@@ -51,6 +51,8 @@ void APlayerPawn::Tick(float DeltaTime)
 	dir.Normalize();
 	
 	FVector newLocation = GetActorLocation() + dir * moveSpeed * DeltaTime;
+	
+	SetActorLocation(newLocation);
 }
 
 // Called to bind functionality to input
