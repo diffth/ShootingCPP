@@ -34,9 +34,6 @@ public:
 	class UStaticMeshComponent* meshComp;
 	
 	UPROPERTY(EditAnywhere)
-	float moveSpeed = 500;
-	
-	UPROPERTY(EditAnywhere)
 	class UInputMappingContext* imc_playerInput;
 	
 	UPROPERTY(EditAnywhere)
@@ -44,6 +41,14 @@ public:
 	
 	UPROPERTY(EditAnywhere)
 	class UInputAction* ia_vertical;
+	
+	UPROPERTY(EditAnywhere)
+	float moveSpeed = 500;
+	
+	UPROPERTY(EditAnywhere)
+	class UArrowComponent* firePosition;
+	
+	TSubclassOf<class ABullet> bulletFactory;
 	
 private:
 	float h;

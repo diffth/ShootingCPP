@@ -4,7 +4,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
-
+#include "Components/ArrowComponent.h"
 
 // Sets default values
 APlayerPawn::APlayerPawn()
@@ -22,6 +22,9 @@ APlayerPawn::APlayerPawn()
 	
 	FVector boxSize = FVector(50.0f, 50.0f, 50.0f);
 	boxComp->SetBoxExtent(boxSize);
+	
+	firePosition = CreateDefaultSubobject<UArrowComponent>(TEXT("Fire Position"));
+	firePosition->SetupAttachment(boxComp);
 }
 
 // Called when the game starts or when spawned
