@@ -11,6 +11,11 @@ ABullet::ABullet()
 	PrimaryActorTick.bCanEverTick = true;
 
 	boxComp = CreateDefaultSubobject<UBoxComponent>(TEXT("Box Collider"));
+	SetRootComponent(boxComp);
+	boxComp->SetBoxExtent(FVector(50.0f, 50.0f, 50.0f));
+	
+	meshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Static Mesh Component"));
+	meshComp->SetupAttachment(boxComp);
 }
 
 // Called when the game starts or when spawned
