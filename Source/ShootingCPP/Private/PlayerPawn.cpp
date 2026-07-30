@@ -89,6 +89,11 @@ void APlayerPawn::OnInputVertical(const FInputActionValue& value)
 	v = value.Get<float>();
 }
 
+void APlayerPawn::MoveHorizontal(float value)
+{
+	h = value;
+}
+
 
 
 
