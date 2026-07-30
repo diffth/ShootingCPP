@@ -31,4 +31,7 @@ public:
 	
 	UPROPERTY(EditAnywhere)
 	FVector initScale = FVector(0.75f, 0.25f, 1.0f);
+	
+	UPROPERTY(EditAnywhere)
+	float moveSpeed = 1000.0f;
 };
