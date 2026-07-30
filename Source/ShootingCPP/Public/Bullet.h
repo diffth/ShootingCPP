@@ -29,4 +29,6 @@ public:
 	UPROPERTY(EditAnywhere)
 	class UStaticMeshComponent* meshComp;
 	
+	UPROPERTY(EditAnywhere)
+	FVector initScale = FVector(0.75f, 0.25f, 1.0f);
 };
