@@ -48,6 +48,7 @@ public:
 	UPROPERTY(EditAnywhere)
 	class UArrowComponent* firePosition;
 	
+	UPROPERTY(EditAnywhere)
 	TSubclassOf<class ABullet> bulletFactory;
 	
 private:
