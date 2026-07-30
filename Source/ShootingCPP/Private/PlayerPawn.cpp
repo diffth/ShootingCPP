@@ -94,6 +94,11 @@ void APlayerPawn::MoveHorizontal(float value)
 	h = value;
 }
 
+void APlayerPawn::MoveVertical(float value)
+{
+	v = value;
+}
+
 
 
 
