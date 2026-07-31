@@ -5,6 +5,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "Components/ArrowComponent.h"
+#include "Bullet.h"
 
 // Sets default values
 APlayerPawn::APlayerPawn()
@@ -90,6 +91,11 @@ void APlayerPawn::OnInputVertical(const FInputActionValue& value)
 	// float ver = value.Get<float>();
 	// UE_LOG(LogTemp, Warning, TEXT("Vertical: %.2f"), ver);
 	v = value.Get<float>();
+}
+
+void APlayerPawn::Fire()
+{
+	
 }
 
 void APlayerPawn::MoveHorizontal(float value)
