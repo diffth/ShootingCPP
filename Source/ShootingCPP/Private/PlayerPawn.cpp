@@ -95,7 +95,7 @@ void APlayerPawn::OnInputVertical(const FInputActionValue& value)
 
 void APlayerPawn::Fire()
 {
-	
+	ABullet* bullet = GetWorld()->SpawnActor<ABullet>(bulletFactory, firePosition->GetComponentLocation(), firePosition->GetComponentRotation());
 }
 
 void APlayerPawn::MoveHorizontal(float value)
