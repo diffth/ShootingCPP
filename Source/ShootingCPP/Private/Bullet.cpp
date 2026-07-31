@@ -15,6 +15,9 @@ ABullet::ABullet()
 	boxComp->SetBoxExtent(FVector(50.0f, 50.0f, 50.0f));
 	boxComp->SetWorldScale3D(initScale);
 	
+	// 스폰 시 플레이어(Pawn)와의 충돌로 밀리거나 멈추는 것을 방지
+	boxComp->SetCollisionResponseToChannel(ECC_Pawn, ECR_Ignore);
+	
 	meshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Static Mesh Component"));
 	meshComp->SetupAttachment(boxComp);
 }
