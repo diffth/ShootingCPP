@@ -43,6 +43,9 @@ public:
 	class UInputAction* ia_vertical;
 	
 	UPROPERTY(EditAnywhere)
+	class UInputAction* ia_fire;
+	
+	UPROPERTY(EditAnywhere)
 	float moveSpeed = 500;
 	
 	UPROPERTY(EditAnywhere)
