@@ -6,6 +6,7 @@
 #include "Components/ArrowComponent.h"
 #include "Bullet.h"
 #include "UObject/ConstructorHelpers.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 APlayerPawn::APlayerPawn()
@@ -113,6 +114,8 @@ void APlayerPawn::Fire()
 		params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
 		GetWorld()->SpawnActor<ABullet>(bulletFactory, firePosition->GetComponentLocation(), firePosition->GetComponentRotation(), params);
+		
+		UGameplayStatics::PlaySound2D(GetWorld(), fireSound);
 	}
 }
 
