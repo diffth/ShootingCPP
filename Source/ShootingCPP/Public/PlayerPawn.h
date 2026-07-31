@@ -62,5 +62,6 @@ private:
 	void OnInputHorizontal(const struct FInputActionValue& value);
 	void OnInputVertical(const struct FInputActionValue& value);
 
+	void Fire();
 	
 };
