@@ -1,4 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
 #include "PlayerPawn.h"
 #include "Components/BoxComponent.h"
 #include "Components/StaticMeshComponent.h"
@@ -6,6 +5,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "Components/ArrowComponent.h"
 #include "Bullet.h"
+#include "UObject/ConstructorHelpers.h"
 
 // Sets default values
 APlayerPawn::APlayerPawn()
@@ -26,6 +26,16 @@ APlayerPawn::APlayerPawn()
 	
 	firePosition = CreateDefaultSubobject<UArrowComponent>(TEXT("Fire Position"));
 	firePosition->SetupAttachment(boxComp);
+	// 총알 발사 위치를 플레이어 상단(+Z)으로 옮기고 위쪽(Pitch=90)을 향하게 설정
+	firePosition->SetRelativeLocation(FVector(0.0f, 0.0f, 100.0f));
+	firePosition->SetRelativeRotation(FRotator(90.0f, 0.0f, 0.0f));
+
+	// BP_Bullet 블루프린트 클래스를 기본 발사체 공장(bulletFactory)으로 지정
+	static ConstructorHelpers::FClassFinder<ABullet> defaultBulletClass(TEXT("/Game/Blueprints/BP_Bullet.BP_Bullet_C"));
+	if (defaultBulletClass.Succeeded())
+	{
+		bulletFactory = defaultBulletClass.Class;
+	}
 }
 
 // Called when the game starts or when spawned
@@ -97,7 +107,13 @@ void APlayerPawn::OnInputVertical(const FInputActionValue& value)
 
 void APlayerPawn::Fire()
 {
-	ABullet* bullet = GetWorld()->SpawnActor<ABullet>(bulletFactory, firePosition->GetComponentLocation(), firePosition->GetComponentRotation());
+	if (bulletFactory != nullptr)
+	{
+		FActorSpawnParameters params;
+		params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+		GetWorld()->SpawnActor<ABullet>(bulletFactory, firePosition->GetComponentLocation(), firePosition->GetComponentRotation(), params);
+	}
 }
 
 void APlayerPawn::MoveHorizontal(float value)
