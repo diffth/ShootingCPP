@@ -23,6 +23,16 @@ void AEnemyActor::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	int32 drawResult = FMath::RandRange(1, 100);
+	
+	if (drawResult <= traceRate)
+	{
+		
+	}
+	else
+	{
+		
+	}
 }
 
 // Called every frame
