@@ -40,7 +40,7 @@ void AEnemyActor::BeginPlay()
 	}
 	else
 	{
-		
+		dir = GetActorForwardVector();
 	}
 }
 
