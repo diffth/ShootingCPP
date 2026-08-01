@@ -32,6 +32,9 @@ public:
 	UPROPERTY(EditAnywhere)
 	int32 traceRate = 50;
 	
+	UPROPERTY(EditAnywhere)
+	float moveSpeed = 800;
+	
 private:
 	FVector dir;
 	
