@@ -3,6 +3,8 @@
 #include "EnemyActor.h"
 #include "Components/BoxComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "EngineUtils.h"
+#include "PlayerPawn.h"
 
 // Sets default values
 AEnemyActor::AEnemyActor()
@@ -27,7 +29,10 @@ void AEnemyActor::BeginPlay()
 	
 	if (drawResult <= traceRate)
 	{
-		
+		for (TActorIterator<APlayerPawn> player(GetWorld()); player; ++player)
+		{
+			
+		}
 	}
 	else
 	{
