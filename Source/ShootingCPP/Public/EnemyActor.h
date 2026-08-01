@@ -29,4 +29,10 @@ public:
 	UPROPERTY(EditAnywhere)
 	class UStaticMeshComponent* meshComp;
 	
+	UPROPERTY(EditAnywhere)
+	int32 traceRate = 50;
+	
+private:
+	FVector dir;
+	
 };
