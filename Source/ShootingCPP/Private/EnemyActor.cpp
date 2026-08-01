@@ -31,7 +31,11 @@ void AEnemyActor::BeginPlay()
 	{
 		for (TActorIterator<APlayerPawn> player(GetWorld()); player; ++player)
 		{
-			
+			if (player->GetName().Contains(TEXT("BP_PlayerPawn")))
+			{
+				dir = player->GetActorLocation() - GetActorLocation();
+				dir.Normalize();
+			}
 		}
 	}
 	else
