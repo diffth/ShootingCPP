@@ -29,7 +29,7 @@ void AEnemyFactory::Tick(float DeltaTime)
 	}
 	else
 	{
-		currentTime = currentTime + DeltaTime;
+		currentTime += DeltaTime;
 	}
 	
 }
