@@ -41,6 +41,9 @@ APlayerPawn::APlayerPawn()
 	boxComp->SetGenerateOverlapEvents(true);
 	boxComp->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	boxComp->SetCollisionObjectType(ECC_GameTraceChannel1);
+	
+	boxComp->SetCollisionResponseToAllChannels(ECR_Ignore);
+	boxComp->SetCollisionResponseToChannel(ECC_GameTraceChannel1, ECR_Overlap);
 }
 
 // Called when the game starts or when spawned
