@@ -25,11 +25,11 @@ void AEnemyFactory::Tick(float DeltaTime)
 
 	if (currentTime > delayTime)
 	{
-		
+		currentTime = 0;
 	}
 	else
 	{
-		
+		currentTime = currentTime + DeltaTime;
 	}
 	
 }
