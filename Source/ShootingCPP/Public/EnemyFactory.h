@@ -26,6 +26,9 @@ public:
 	UPROPERTY(EditAnywhere)
 	float delayTime = 2.0f;
 	
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class AEnemyActor> enemy;
+	
 private:
 	float currentTime = 0;
 };
