@@ -37,6 +37,10 @@ APlayerPawn::APlayerPawn()
 	{
 		bulletFactory = defaultBulletClass.Class;
 	}
+	
+	boxComp->SetGenerateOverlapEvents(true);
+	boxComp->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	boxComp->SetCollisionObjectType(ECC_GameTraceChannel1);
 }
 
 // Called when the game starts or when spawned
