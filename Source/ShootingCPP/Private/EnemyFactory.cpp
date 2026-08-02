@@ -23,5 +23,13 @@ void AEnemyFactory::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (currentTime > delayTime)
+	{
+		
+	}
+	else
+	{
+		
+	}
+	
 }
-
