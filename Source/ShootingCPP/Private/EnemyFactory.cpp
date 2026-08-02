@@ -2,6 +2,7 @@
 
 
 #include "EnemyFactory.h"
+#include "EnemyActor.h"
 
 // Sets default values
 AEnemyFactory::AEnemyFactory()
@@ -26,6 +27,7 @@ void AEnemyFactory::Tick(float DeltaTime)
 	if (currentTime > delayTime)
 	{
 		currentTime = 0;
+		AEnemyActor* spawnActor = GetWorld()->SpawnActor<AEnemyActor>(enemy, GetActorLocation(), GetActorRotation());
 	}
 	else
 	{
