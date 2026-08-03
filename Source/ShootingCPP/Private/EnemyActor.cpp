@@ -18,6 +18,8 @@ AEnemyActor::AEnemyActor()
 	
 	meshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Static mesh"));
 	meshComp->SetupAttachment(boxComp);
+	
+	boxComp->SetCollisionProfileName(TEXT("Enemy"));
 }
 
 // Called when the game starts or when spawned
