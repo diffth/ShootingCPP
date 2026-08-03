@@ -29,6 +29,7 @@ void ABullet::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	boxComp->OnComponentBeginOverlap;
 }
 
 // Called every frame
