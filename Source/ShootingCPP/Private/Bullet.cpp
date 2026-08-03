@@ -56,5 +56,6 @@ void ABullet::OnBulletOverlap(UPrimitiveComponent* OverlappedComponent, AActor* 
 	{
 		OtherActor->Destroy();
 	}
+	Destroy();
 }
 
