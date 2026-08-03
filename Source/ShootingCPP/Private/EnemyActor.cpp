@@ -44,6 +44,7 @@ void AEnemyActor::BeginPlay()
 	{
 		dir = GetActorForwardVector();
 	}
+	boxComp->OnComponentBeginOverlap.AddDynamic(this, &AEnemyActor::OnEnemyOverlap);
 }
 
 // Called every frame
@@ -58,6 +59,12 @@ void AEnemyActor::Tick(float DeltaTime)
 void AEnemyActor::OnEnemyOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	
+	APlayerPawn* player = Cast<APlayerPawn>(OtherActor);
+
+	if (player != nullptr)
+	{
+		OtherActor->Destroy();
+	}
+	Destroy();
 }
 
